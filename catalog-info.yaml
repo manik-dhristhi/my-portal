@@ -1,13 +1,21 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-portal
-  description: An example of a Backstage application.
-  # Example for optional annotations
-  # annotations:
-  #   github.com/project-slug: backstage/backstage
-  #   backstage.io/techdocs-ref: dir:.
+  name: my-backstage-portal
+  description: My Backstage demo portal with GitHub authentication and discovery
+  annotations:
+    github.com/project-slug: manik-dhristhi/backstage-demo
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: website
-  owner: john@example.com
   lifecycle: experimental
+  owner: manik-dhristhi
+  system: learning-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: learning-platform
+  description: Platform for learning Backstage features from basic to advanced
+spec:
+  owner: manik-dhristhi
