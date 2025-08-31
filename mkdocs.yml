@@ -1,0 +1,26 @@
+site_name: 'My Backstage Portal'
+site_description: 'Documentation for My Backstage Learning Portal'
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Configuration: getting-started/configuration.md
+    - Authentication: getting-started/authentication.md
+  - Features:
+    - GitHub Integration: features/github-integration.md
+    - Catalog Management: features/catalog.md
+    - TechDocs: features/techdocs.md
+  - API Reference:
+    - Overview: api/overview.md
+    - Endpoints: api/endpoints.md
+  - Contributing: contributing.md
+
+plugins:
+  - techdocs-core
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'blue'
+    accent: 'blue'

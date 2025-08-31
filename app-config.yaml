@@ -81,7 +81,7 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   locations:
-    # GitHub URL integration - test with a specific repository first
+    # GitHub integration - using proper GitHub URL format that works with integrations
     - type: url
       target: https://github.com/manik-dhristhi/my-portal/blob/master/catalog-info.yaml
 
