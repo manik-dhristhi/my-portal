@@ -4,7 +4,7 @@ metadata:
   name: my-backstage-portal
   description: My Backstage demo portal with GitHub authentication and discovery
   annotations:
-    github.com/project-slug: manik-dhristhi/backstage-demo
+    github.com/project-slug: manik-dhristhi/my-portal
     backstage.io/techdocs-ref: dir:.
 spec:
   type: website

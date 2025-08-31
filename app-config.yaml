@@ -81,11 +81,9 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   locations:
-    # GitHub Discovery - Automatically discover repositories from manik-dhristhi
-    - type: github-discovery
-      target: https://github.com/manik-dhristhi
-      rules:
-        - allow: [Component, System, API, Resource, Location]
+    # GitHub URL integration - test with a specific repository first
+    - type: url
+      target: https://github.com/manik-dhristhi/my-portal/blob/master/catalog-info.yaml
 
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
