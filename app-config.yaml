@@ -63,10 +63,13 @@ techdocs:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
 auth:
-  # see https://backstage.io/docs/auth/ to learn about auth providers
+  environment: development
   providers:
-    # See https://backstage.io/docs/auth/guest/provider
-    guest: {}
+    github:
+      development:
+        clientId: ${GITHUB_CLIENT_ID}
+        clientSecret: ${GITHUB_CLIENT_SECRET}
+        scopes: 'read:user user:email'
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
@@ -78,6 +81,12 @@ catalog:
   rules:
     - allow: [Component, System, API, Resource, Location]
   locations:
+    # GitHub Discovery - Automatically discover repositories from manik-dhristhi
+    - type: github-discovery
+      target: https://github.com/manik-dhristhi
+      rules:
+        - allow: [Component, System, API, Resource, Location]
+
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
       target: ../../examples/entities.yaml
