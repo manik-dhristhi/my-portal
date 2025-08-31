@@ -24,12 +24,6 @@ metadata:
     
     # Documentation
     backstage.io/techdocs-ref: dir:.
-    
-    # CI/CD Integration
-    github.com/workflows: ci.yml,deploy.yml
-    
-    # Additional metadata
-    backstage.io/source-location: url:https://github.com/manik-dhristhi/my-portal
 spec:
   type: website
   lifecycle: experimental
